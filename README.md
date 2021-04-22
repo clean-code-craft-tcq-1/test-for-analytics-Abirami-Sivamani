@@ -64,12 +64,12 @@ Consider the tests for each functionality below.
 In those tests, identify inputs and outputs.
 Enter one part that's real and another part that's faked/mocked.
 
-| Functionality            | Input        | Output                                              | Faked/mocked part
-|--------------------------|--------------|-----------------------------------------------------|----------------------
-Read input from server     | csv file     | internal data-structure                             | Fake the server store
-Validate input             | csv data     | valid / invalid                                     | None - it's a pure function
-Notify report availability | pdf file     | Notification of New Report Available                | Fake the notification call
-Report inaccessible server | csv file     | can't access csv file                               | Fake the server store
-Find minimum and maximum   | csv data     | Minimum/Maximum                                     | None - it's a pure function
-Detect trend               | csv data     | Date & Time, Reading                                | None - it's a pure function
-Write to PDF               | csv data     | Minimum, Maximum, Trends, Breach count              | Fake the PDF write
+| Functionality            | Input          | Output                                              | Faked/mocked part
+|--------------------------|--------------  |-----------------------------------------------------|----------------------
+Read input from server     | csv file       | internal data-structure                             | Fake the server store
+Validate input             | csv data       | valid / invalid                                     | None - it's a pure function
+Notify report availability | pdf file       | Notification of New Report Available                | Fake the notification call
+Report inaccessible server | csv file with path       | can't access csv file                     | Fake the server store
+Find minimum and maximum   | csv data       | Minimum/Maximum                                     | None - it's a pure function
+Detect trend               | csv data       | Date & Time, Reading                                | None - it's a pure function
+Write to PDF               | csv data       | Write Minimum, Maximum, Trends, Breach count to pdf | Fake the PDF write
